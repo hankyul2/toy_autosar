@@ -11,10 +11,17 @@ This repository contains 3 projects. First, baremetal programming project. This 
 Baremetal project uses arm cortex-m3 lpc1768 board and uses keil which is embedded software tools.
 Here is board pictures. Details of this project can be found [here](https://github.com/hankyul2/toy_autosar/blob/main/baremetal_programming/docs/team_project_docs.pdf)
 
+![overview](https://github.com/hankyul2/toy_autosar/blob/main/baremetal_programming/docs/overview.png)
+
 ## nxt osek
 
 NXT OSEK made 2 cars and this is two cars. Details of this project can be found [here](https://github.com/hankyul2/toy_autosar/blob/main/autosar/docs/team_project_docs.pdf).
 
+![overview](https://github.com/hankyul2/toy_autosar/blob/main/osek/docs/overview.png)
+
 ## autosar
 
 AUTOSAR project get helped from etas company. They give our class members isolar tool license for 3 months. Details of our project can be found [here](https://github.com/hankyul2/toy_autosar/blob/main/osek/docs/team_project_docs.pdf).
+
+![overview](https://github.com/hankyul2/toy_autosar/blob/main/autosar/docs/overview.png)
+
