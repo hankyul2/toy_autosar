@@ -1,0 +1,616 @@
+<vrta>
+ <command>describe</command>
+ <exit_status>0</exit_status>
+ <host>127.0.0.1</host>
+ <vecu>
+  <description name="AFS.exe">
+   <Alias>AFS.exe</Alias>
+   <Core>NYA</Core>
+   <Date>2020-10-25  1:44:32</Date>
+   <DiagPort>56835</DiagPort>
+   <FullHostName>DESKTOP-7GFL6FU</FullHostName>
+   <Home>C:\Program Files\ETAS\ISOLAR-EVE3.0\plugins\com.etas.evetools.toolsfolder_1.4.5\Tools\bin</Home>
+   <HostName>DESKTOP-7GFL6FU</HostName>
+   <Priority>2</Priority>
+   <ProcessID>23248</ProcessID>
+   <Scheduling>NYA</Scheduling>
+   <VMCompanyName>ETAS GmbH.</VMCompanyName>
+   <VMCopyright>Copyright  ETAS GmbH 2005-2015.</VMCopyright>
+   <VMDate>2015-12-07  6:57:06</VMDate>
+   <VMFileDescription>RTA Multi-Core Virtual Machine</VMFileDescription>
+   <VMLocation>C:\Program Files\ETAS\ISOLAR-EVE3.0\plugins\com.etas.evetools.toolsfolder_1.4.5\Tools\bin\</VMLocation>
+   <VMName>vrtaVM.dll</VMName>
+   <VMProductVersion>5.1.0</VMProductVersion>
+   <VMVersion>5.2.1.4</VMVersion>
+   <device name="DeviceManager" id="0">
+    <action name="EventRegister" id="1" description="Registers a TCP/IP port wishing to hook events">
+     <in name="IpAndPort" id="1" description="Format is &lt;IP address&gt;\n&lt;Port&gt;" format="%s" />
+    </action>
+    <action name="HookEvents" id="2" description="Specifies devices and event to hook">
+     <in name="HookList" id="1" description="Format is \n separated list of items of the form &lt;device&gt;=&lt;event_ids&gt;. Event ids are comma separated." format="%s" />
+    </action>
+    <action name="ListAll" id="3" description="Causes the DeviceList Event to be raised (Raises DeviceList Event)">
+    </action>
+    <action name="GetDeviceActions" id="4" description="Causes the DeviceActions Event to be raised (Raises DeviceActions Event)">
+     <in name="Name" id="1" description="Name of device" format="%s" />
+    </action>
+    <action name="GetDeviceEvents" id="5" description="Causes the DeviceEvents Event to be raised (Raises DeviceEvents Event)">
+     <in name="Name" id="1" description="Name of device" format="%s" />
+    </action>
+    <action name="GetDeviceInfo" id="6" description="Causes the DeviceInfo Event to be raised (Raises DeviceInfo Event)">
+     <in name="Name" id="1" description="Name of device" format="%s" />
+    </action>
+    <event name="DeviceList" id="1" description="Lists the names of all virtual devices (Raise,Poll)">
+     <out name="Devices" id="1" description="List of device names" format="%s" />
+    </event>
+    <event name="DeviceActions" id="2" description="Lists the actions of the specified virtual device (Raise,Poll)">
+     <in name="Name" id="1" description="Name of device" format="%s" />
+     <out name="Actions" id="1" description="List of actions" format="%s" />
+    </event>
+    <event name="DeviceEvents" id="3" description="Lists the events of the specified virtual device (Raise,Poll)">
+     <in name="Name" id="1" description="Name of device" format="%s" />
+     <out name="Events" id="1" description="List of events" format="%s" />
+    </event>
+    <event name="DeviceInfo" id="4" description="Lists the auxiliary information about the specified virtual device (Raise,Poll)">
+     <in name="Name" id="1" description="Name of device" format="%s" />
+     <out name="Info" id="1" description="List of name-value pairs" format="%s" />
+    </event>
+   </device>
+   <device name="ICU" id="1">
+    <action name="Raise" id="1" description="Makes the specified interrupt pending">
+     <in name="VecNum" id="1" description="The number of the interrupt" format="%d:;1;32" />
+    </action>
+    <action name="Clear" id="2" description="Clears the pending flag for the specified interrupt">
+     <in name="VecNum" id="1" description="The number of the interrupt" format="%d:;1;32" />
+    </action>
+    <action name="Mask" id="3" description="Disables the specified interrupt">
+     <in name="VecNum" id="1" description="The number of the interrupt" format="%d:;1;32" />
+    </action>
+    <action name="Unmask" id="4" description="Enables the specified interrupt">
+     <in name="VecNum" id="1" description="The number of the interrupt" format="%d:;1;32" />
+    </action>
+    <action name="GetPending" id="5" description="Causes the Pending Event to be raised (Raises Pending Event)">
+    </action>
+    <action name="GetIPL" id="6" description="Causes the IPL Event to be raised (Raises IPL Event)">
+    </action>
+    <action name="SetIPL" id="7" description="Sets the IPL (Raises IPL Event)">
+     <in name="Prio" id="1" description="The ICU priority" format="%d:;0;32" />
+    </action>
+    <event name="Pending" id="1" description="Get the bitmask of pending interrupts (Raise,Poll)">
+     <out name="Bits" id="1" description="Bitmask of pending interrupts" format="%b" />
+    </event>
+    <event name="Start" id="2" description="Raised just before an interrupt handler starts (Raise)">
+     <out name="VecNum" id="1" description="The number of the interrupt" format="%d" />
+    </event>
+    <event name="Stop" id="3" description="Raised just after an interrupt handler ends (Raise)">
+     <out name="VecNum" id="1" description="The number of the interrupt" format="%d" />
+    </event>
+    <event name="IPL" id="4" description="The interrupt priority level (Raise,Poll)">
+     <out name="Prio" id="1" description="The ICU priority" format="%d" />
+    </event>
+    <event name="EnabledVecs" id="5" description="Get the bitmask of enabled interrupts (Poll)">
+     <out name="Bits" id="1" description="Bitmask of pending interrupts" format="%b" />
+    </event>
+   </device>
+   <device name="ApplicationManager" id="2">
+    <action name="Start" id="1" description="Starts the OS thread. Only relevant when the VECU was loaded but not started. (Raises the Start Event)">
+    </action>
+    <action name="Terminate" id="2" description="Terminates the VECU (Raises the Terminate Event)">
+    </action>
+    <action name="Pause" id="3" description="Suspends operation of the OS thread (Raises the Pause Event)">
+    </action>
+    <action name="Restart" id="4" description="Resumes operation of the OS thread (Raises the Restart Event)">
+    </action>
+    <action name="Reset" id="5" description="Resets the VECU (Raises the Reset Event)">
+    </action>
+    <action name="GetInfo" id="6" description="Causes the GetInfo Event to be raised (Raises the GetInfo Event)">
+    </action>
+    <action name="TestOption" id="7" description="Causes the  Option event to be raised to signal if the named command-line option exists (Raises the Option Event)">
+     <in name="Option" id="1" description="Name of the command-line option" format="%s" />
+    </action>
+    <action name="ReadOption" id="8" description="Causes the OptionText event to be raised containing the full text of the command-line option that starts with the specified string (Raises the OptionText Event)">
+     <in name="Option" id="1" description="Name of the command-line option" format="%s" />
+    </action>
+    <action name="ReadParam" id="9" description="Causes the ParamText event to be raised containing the full text of the specified command-line parameter (Raises the ParamText Event)">
+     <in name="OptNum" id="1" description="Number of the command-line option starting at 0" format="%u" />
+    </action>
+    <event name="Started" id="1" description="Indicates that the OS thread is started (Raise)?">
+    </event>
+    <event name="Paused" id="2" description="Indicates that the OS thread is paused (Raise,Poll)">
+    </event>
+    <event name="Restarted" id="3" description="Indicates that the OS thread is resumed (Raise,Poll)">
+    </event>
+    <event name="Reset" id="4" description="Indicates that the VECU is being reset (Raise,Poll)">
+    </event>
+    <event name="Terminated" id="5" description="Indicates that the VECU is terminating (Raise,Poll)">
+    </event>
+    <event name="Info" id="6" description="Contains auxiliary information about the VECU (Raise,Poll)">
+     <out name="Info" id="1" description="List of auxiliary information about the VECU" format="%s" />
+    </event>
+    <event name="Option" id="7" description="Reports if the named command-line option exists (Raise,Poll)">
+     <in name="Option" id="1" description="Name of the command-line option" format="%s" />
+     <out name="Present" id="1" description="1 if present else 0" format="%u" />
+    </event>
+    <event name="OptionText" id="8" description="Returns the text of the command-line option starting with specified text (Raise,Poll)">
+     <in name="Option" id="1" description="Name of the command-line option" format="%s" />
+     <out name="Text" id="1" description="Text of the option or empty if the option does not exist" format="%s" />
+    </event>
+    <event name="ParamText" id="9" description="Returns the full texts of the specified command-line parameter (Raise,Poll)">
+     <in name="OptNum" id="1" description="Number of the command-line option starting at 0" format="%u" />
+     <out name="Text" id="1" description="Text of the nth command-line option" format="%s" />
+    </event>
+    <event name="State" id="10" description="Returns the OS state (Poll)">
+     <out name="State" id="1" description="Running state" format="Loaded|Running|Paused|Terminating|Resetting" />
+    </event>
+    <event name="CoreCount" id="11" description="Reports the number of virtual cores configured in the VECU (Poll)">
+     <out name="Count" id="1" description="Number of virtual cores" format="%u" />
+    </event>
+   </device>
+   <device name="SystemClock" id="3">
+    <action name="Scale" id="1" description="Change the tick duration in ms (Updates Scale Event)">
+     <in name="Duration" id="1" description="Tick duration in ms" format="%u" />
+    </action>
+    <action name="Pause" id="2" description="Pause the clock. No ticks occur while paused, even in manual tick mode (Updates Mode Event)">
+    </action>
+    <action name="Resume" id="3" description="Resume the clock (Updates Mode Event)">
+    </action>
+    <action name="Strategy" id="4" description="Strategy for Auto ticks when the host PC is busy (Updates Strategy Event)">
+     <in name="Prefer" id="1" description="RealTime keeps ticks 1ms apart on average - intervals can become small. FixedInterval keeps ticks at least 1ms apart" format="RealTime|FixedInterval" />
+    </action>
+    <action name="AutoTick" id="5" description="Tick automatically every 1ms (Updates Mode Event)">
+    </action>
+    <action name="DirectTick" id="6" description="Stop AutoTick and inject 0 or more ticks directly (Updates Mode Event)">
+     <in name="Ticks" id="1" description="Number of ticks to inject" format="%u" />
+    </action>
+    <action name="DirectTickFreezesOS" id="7" description="When TRUE, OS is frozen after DirectTick (No associated Event)">
+     <in name="Freeze" id="1" description="TRUE to freeze OS after ticking" format="FALSE|TRUE" />
+    </action>
+    <action name="DirectTickYield" id="8" description="When TRUE, VECU suspends temporarily after DirectTick completes to reduce CPU usage (Updates DirectTickYield Event)">
+     <in name="Yield" id="1" description="TRUE to yield after ticking" format="FALSE|TRUE" />
+    </action>
+    <action name="IdleTick" id="9" description="Tick when vrtaIsIdle() occurs so system runs at maximum rate.  (Updates Mode Event)">
+    </action>
+    <action name="UpdateAndTick" id="10" description="Update multiple actions and optionally inject 0 or more ticks directly (Updates Mode Event)">
+     <in name="Data" id="1" description="Encoded data" format="%a" />
+    </action>
+    <action name="MonitorEvents" id="11" description="Specify events to monitor for PostTickData event (Affects PostTickData Event)">
+     <in name="Data" id="1" description="Encoded event list" format="%a" />
+    </action>
+    <action name="CSLIF" id="12" description="Fast connection mechanism for VECUs on local host (Used by FMU/SFunction)">
+     <in name="Name" id="1" description="CSL channel name" format="%s" />
+    </action>
+    <event name="Scale" id="1" description="The tick duration in ms (Raise,Poll)">
+     <out name="Duration" id="1" description="Tick duration in ms" format="%u" />
+    </event>
+    <event name="Mode" id="2" description="The operating mode (Raise,Poll)">
+     <out name="Value" id="1" description="Auto =&gt; 1ms tick" format="Paused|Auto|Directed|IdleTicked" />
+    </event>
+    <event name="Ticks" id="3" description="The number of ticks delivered (Raise,Poll)">
+     <out name="Count" id="1" description="The number of ticks" format="%u" />
+    </event>
+    <event name="Milliseconds" id="4" description="The number of milliseconds since start. Does not pause. (Poll)">
+     <out name="Count" id="1" description="The number of ms" format="%u" />
+    </event>
+    <event name="Remaining" id="5" description="For DirectTick, the number ticks remaining. Reports to hook only when completed. (Raise,Poll)">
+     <out name="Value" id="1" description="The ticks remaining" format="%u" />
+    </event>
+    <event name="PostTickData" id="6" description="After DirectTick, return the monitored event data. (Raise,Poll)">
+     <out name="Data" id="1" description="The monitored event data" format="%a" />
+    </event>
+    <event name="EventedDirectTick" id="7" description="Faster version of DirectTick Action. Blocks until ticks have completed so it is not necessary to hook the Remaining Event (Poll)">
+     <in name="Ticks" id="1" description="Ticks to inject" format="%u" />
+     <out name="Ticks" id="1" description="The number of ticks injected" format="%u" />
+    </event>
+    <event name="DirectTickYield" id="8" description="Value of DirectTickYield action (Poll)">
+     <out name="Yield" id="1" description="TRUE to yield after ticking" format="FALSE|TRUE" />
+    </event>
+    <event name="Strategy" id="9" description="Strategy for Auto ticks when the host PC is busy (Raise,Poll)">
+     <out name="Prefer" id="1" description="RealTime keeps ticks 1ms apart on average - intervals can become small. FixedInterval keeps ticks at least 1ms apart" format="RealTime|FixedInterval" />
+    </event>
+    <event name="CSLIF" id="10" description="Fast connection mechanism for VECUs on local host (Poll)">
+     <out name="Name" id="1" description="CSL channel name" format="%s" />
+    </event>
+   </device>
+   <device name="OsMonitor" id="4">
+    <event name="AppMode" id="1" description="The current AppMode (Poll)">
+     <out name="Value" id="1" description="AppMode" format="None|OSDEFAULTAPPMODE" />
+    </event>
+    <event name="ISR_VECU_SystemClock_ISR" id="2" description="Get ISR Status (Poll)">
+     <out name="Count" id="1" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TAKS_ECU_SPEED" id="3" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ECU_ACTUATOR" id="4" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ECU_DISTANCE" id="5" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ECU_LIGHT" id="6" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ECU_LIGHTMODE" id="7" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_EUC_STEERINGANGLE" id="8" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_HIGHBEAM_RECEIVE" id="9" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_HIGHBEAM_SEND" id="10" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_LEFTRIGHTANGLE_RECEIVE" id="11" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_LEFTRIGHTANGLE_SEND" id="12" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_LOWBEAM_RECEIVE" id="13" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_LOWBEAM_SEND" id="14" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_UPDOWNANGLE_RECEIVE" id="15" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_ACT_UPDOWNANGLE_SEND" id="16" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_SENSOR_DISTANCE" id="17" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_SENSOR_LIGHT" id="18" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_SENSOR_LIGHTMODE" id="19" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_SENSOR_SPEED" id="20" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_SENSOR_STEERINGANGLE" id="21" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_APP_HIGHBEAM" id="22" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_APP_LOWBEAM" id="23" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Task_TASK_APP_MOTOR" id="24" description="Get Task Status (Poll)">
+     <out name="State" id="1" description="Task state" format="Suspended|Ready|Running|Waiting" />
+     <out name="Count" id="2" description="Number of times it has started" format="%u" />
+    </event>
+    <event name="Counter_Rte_TOutCounter" id="25" description="Get Counter Status (Poll)">
+     <out name="State" id="1" description="State is Active if the Counter has active Alarms or ScheduleTables" format="Inactive|Active" />
+     <out name="Value" id="2" description="Current Tick value" format="%u" />
+     <out name="Next" id="3" description="Ticks to next alarm/expiry" format="%u" />
+    </event>
+    <event name="Counter_Rte_TickCounter" id="26" description="Get Counter Status (Poll)">
+     <out name="State" id="1" description="State is Active if the Counter has active Alarms or ScheduleTables" format="Inactive|Active" />
+     <out name="Value" id="2" description="Current Tick value" format="%u" />
+     <out name="Next" id="3" description="Ticks to next alarm/expiry" format="%u" />
+    </event>
+    <event name="Alarm_Rte_TimeoutAlarm1" id="27" description="Get Alarm Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Disabled|Running" />
+     <out name="Next" id="2" description="Ticks to next activation. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the alarm" format="None|Rte_TOutCounter|Rte_TickCounter" />
+     <out name="Count" id="4" description="Number of times alarm has expired" format="%u" />
+    </event>
+    <event name="Alarm_Rte_TimeoutAlarm2" id="28" description="Get Alarm Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Disabled|Running" />
+     <out name="Next" id="2" description="Ticks to next activation. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the alarm" format="None|Rte_TOutCounter|Rte_TickCounter" />
+     <out name="Count" id="4" description="Number of times alarm has expired" format="%u" />
+    </event>
+    <event name="Alarm_Rte_TimeoutAlarm3" id="29" description="Get Alarm Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Disabled|Running" />
+     <out name="Next" id="2" description="Ticks to next activation. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the alarm" format="None|Rte_TOutCounter|Rte_TickCounter" />
+     <out name="Count" id="4" description="Number of times alarm has expired" format="%u" />
+    </event>
+    <event name="Alarm_Rte_TimeoutAlarm4" id="30" description="Get Alarm Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Disabled|Running" />
+     <out name="Next" id="2" description="Ticks to next activation. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the alarm" format="None|Rte_TOutCounter|Rte_TickCounter" />
+     <out name="Count" id="4" description="Number of times alarm has expired" format="%u" />
+    </event>
+    <event name="Alarm_Rte_TimeoutAlarm5" id="31" description="Get Alarm Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Disabled|Running" />
+     <out name="Next" id="2" description="Ticks to next activation. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the alarm" format="None|Rte_TOutCounter|Rte_TickCounter" />
+     <out name="Count" id="4" description="Number of times alarm has expired" format="%u" />
+    </event>
+    <event name="Alarm_Rte_TimeoutAlarm6" id="32" description="Get Alarm Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Disabled|Running" />
+     <out name="Next" id="2" description="Ticks to next activation. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the alarm" format="None|Rte_TOutCounter|Rte_TickCounter" />
+     <out name="Count" id="4" description="Number of times alarm has expired" format="%u" />
+    </event>
+    <event name="Table_Rte_ScheduleTable" id="33" description="Get ScheduleTable Status (Poll)">
+     <out name="State" id="1" description="Running state" format="Stopped|Next|Waiting|Running|Synchronous" />
+     <out name="Next" id="2" description="Ticks to next expiry. 0 if disabled" format="%u" />
+     <out name="Counter" id="3" description="Counter driving the ScheduleTable" format="None|Rte_TOutCounter|Rte_TickCounter" />
+    </event>
+   </device>
+   <device name="OsCore0" id="5">
+    <action name="IdleCount" id="1" description="Change the count of calls to vrtaIsIdle()">
+     <in name="Count" id="1" description="New value" format="%u" />
+    </action>
+    <event name="_Parent" id="1" description="ID of the OS this device (Poll)">
+     <out name="Id" id="1" description="Parent ID" format="%u" />
+    </event>
+    <event name="IdleCount" id="2" description="Count of calls to vrtaIsIdle() from Os_Cbk_Idle() (Poll)">
+     <out name="Count" id="1" description="Number of calls" format="%u" />
+    </event>
+    <event name="CurrentApplication" id="3" description="The application ID (Poll)">
+     <out name="Name" id="1" description="OS Application name" format="None|" />
+    </event>
+    <event name="LastError" id="4" description="The most recent API error code (Poll)">
+     <out name="Value" id="1" description="Error ID" format="OK|ACCESS|CALLEVEL|ID|LIMIT|NOFUNC|RESOURCE|STATE|VALUE|SERVICEID|ILLEGAL_ADDRESS|MISSINGEND|DISABLEDINT|STACKFAULT|PROTECTION_MEMORY|PROTECTION_TIME|PROTECTION_ARRIVAL|PROTECTION_LOCKED|PROTECTION_EXCEPTION|CORE|SPINLOCK|INTERFERENCE_DEADLOCK|NESTING_DEADLOCK|SYS_NO_RESTART|SYS_RESTART|SYS_OVERRUN" />
+    </event>
+    <event name="RunningTask" id="5" description="The task that is running (Poll)">
+     <out name="Name" id="1" description="Task name" format="None|TAKS_ECU_SPEED|TASK_ECU_ACTUATOR|TASK_ECU_DISTANCE|TASK_ECU_LIGHT|TASK_ECU_LIGHTMODE|TASK_EUC_STEERINGANGLE|TASK_ACT_HIGHBEAM_RECEIVE|TASK_ACT_HIGHBEAM_SEND|TASK_ACT_LEFTRIGHTANGLE_RECEIVE|TASK_ACT_LEFTRIGHTANGLE_SEND|TASK_ACT_LOWBEAM_RECEIVE|TASK_ACT_LOWBEAM_SEND|TASK_ACT_UPDOWNANGLE_RECEIVE|TASK_ACT_UPDOWNANGLE_SEND|TASK_SENSOR_DISTANCE|TASK_SENSOR_LIGHT|TASK_SENSOR_LIGHTMODE|TASK_SENSOR_SPEED|TASK_SENSOR_STEERINGANGLE|TASK_APP_HIGHBEAM|TASK_APP_LOWBEAM|TASK_APP_MOTOR" />
+    </event>
+    <event name="RunningISR" id="6" description="The category 2 ISR that is running (Poll)">
+     <out name="Name" id="1" description="ISR name" format="None|VECU_SystemClock_ISR" />
+    </event>
+   </device>
+   <device name="distanceSensor" id="6">
+    <action name="Value" id="1" description="Set sensor value (Raises Value Event)">
+     <in name="Value" id="1" description="Sensor value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set sensor value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Sensor value (Raise,Poll)">
+     <out name="Value" id="1" description="Sensor value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Sensor value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="SteeringAngleSensor" id="7">
+    <action name="Value" id="1" description="Set sensor value (Raises Value Event)">
+     <in name="Value" id="1" description="Sensor value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set sensor value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Sensor value (Raise,Poll)">
+     <out name="Value" id="1" description="Sensor value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Sensor value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="SpeedSensor" id="8">
+    <action name="Value" id="1" description="Set sensor value (Raises Value Event)">
+     <in name="Value" id="1" description="Sensor value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set sensor value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Sensor value (Raise,Poll)">
+     <out name="Value" id="1" description="Sensor value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Sensor value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="LightSensor" id="9">
+    <action name="Value" id="1" description="Set sensor value (Raises Value Event)">
+     <in name="Value" id="1" description="Sensor value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set sensor value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Sensor value (Raise,Poll)">
+     <out name="Value" id="1" description="Sensor value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Sensor value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="LightModeSensor" id="10">
+    <action name="Value" id="1" description="Set sensor value (Raises Value Event)">
+     <in name="Value" id="1" description="Sensor value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set sensor value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Sensor value (Raise,Poll)">
+     <out name="Value" id="1" description="Sensor value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Sensor value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Sensor maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="UPDOWNMotorActuator" id="11">
+    <action name="Value" id="1" description="Set actuator value (Raises Value Event)">
+     <in name="Value" id="1" description="Actuator value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set actuator value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Actuator value (Raise,Poll)">
+     <out name="Value" id="1" description="Actuator value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Actuator value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="LEFTRIGHTMotorActuator" id="12">
+    <action name="Value" id="1" description="Set actuator value (Raises Value Event)">
+     <in name="Value" id="1" description="Actuator value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set actuator value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Actuator value (Raise,Poll)">
+     <out name="Value" id="1" description="Actuator value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Actuator value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="LowBeamActuator" id="13">
+    <action name="Value" id="1" description="Set actuator value (Raises Value Event)">
+     <in name="Value" id="1" description="Actuator value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set actuator value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Actuator value (Raise,Poll)">
+     <out name="Value" id="1" description="Actuator value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Actuator value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="HighBeamActuator" id="14">
+    <action name="Value" id="1" description="Set actuator value (Raises Value Event)">
+     <in name="Value" id="1" description="Actuator value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set actuator value limit (Raises Maximum Event)">
+     <in name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </action>
+    <event name="Value" id="1" description="Actuator value (Raise,Poll)">
+     <out name="Value" id="1" description="Actuator value" format="%u" />
+    </event>
+    <event name="Maximum" id="2" description="Actuator value limit (Raise,Poll)">
+     <out name="Max" id="1" description="Actuator maximum value" format="%u" />
+    </event>
+   </device>
+   <device name="Status" id="15">
+    <action name="Print" id="1" description="Sends a string to the logger (Raises Read and Lines Events)">
+     <in name="Text" id="1" description="Text to write" format="%s" />
+    </action>
+    <action name="OutputFile" id="2" description="Sets the name of the primary logger output file">
+     <in name="File" id="1" description="Name of primary output file" format="%s" />
+    </action>
+    <action name="Duplicate" id="3" description="Sets the name of the duplicate logger output file">
+     <in name="File" id="1" description="Name of secondary output file" format="%s" />
+    </action>
+    <event name="Read" id="1" description="Content of logger text buffer (Raise,Poll)">
+     <out name="Text" id="1" description="Content of logger text buffer" format="%s" />
+    </event>
+    <event name="Lines" id="2" description="Number of lines in logger text buffer (Raise,Poll)">
+     <out name="Count" id="1" description="Number of lines in logger text buffer" format="%u" />
+    </event>
+    <event name="_Parent" id="3">
+     <out name="Value" id="1" format="%u" />
+    </event>
+   </device>
+   <device name="SystemTick" id="16">
+    <action name="Interval" id="1" description="Set interval in ms (Raises Interval Event)">
+     <in name="ms" id="1" description="Set tick interval in milliseconds" format="%u" />
+    </action>
+    <action name="Scale" id="2" description="Set the clock frequency scale factor (Raises Scale Event)">
+     <in name="Multiplier" id="1" description="Multiplies the interval" format="%u" />
+     <in name="Divider" id="2" description="Divides the interval" format="%u" />
+    </action>
+    <action name="Start" id="3" description="Start the clock (Raises Running Event)">
+    </action>
+    <action name="Stop" id="4" description="Stop the clock (Raises Running Event)">
+    </action>
+    <event name="Interval" id="1" description="The clock interval in ms (Raise,Poll)">
+     <out name="ms" id="1" description="Interval in milliseconds" format="%u" />
+    </event>
+    <event name="Scale" id="2" description="The frequency scale factor (Raise,Poll)">
+     <out name="Multiplier" id="1" description="Multiplies the interval" format="%u" />
+     <out name="Divider" id="2" description="Divides the interval" format="%u" />
+    </event>
+    <event name="Running" id="3" description="The running state (Raise,Poll)">
+     <out name="State" id="1" description="1 when the clock is running" format="%u:;0;1" />
+    </event>
+   </device>
+   <device name="VECU_SystemClockCounter" id="17">
+    <action name="Minimum" id="1" description="Set the start value for the count">
+     <in name="Min" id="1" description="Minimum count value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set the maximum value for the count">
+     <in name="Max" id="1" description="Maximum count value" format="%u" />
+    </action>
+    <action name="Set" id="3" description="Set the count value">
+     <in name="Count" id="1" description="Count value" format="%u" />
+    </action>
+    <action name="Start" id="4" description="Enable counting">
+    </action>
+    <action name="Stop" id="5" description="Disable counting">
+    </action>
+    <action name="Report" id="6" description="Causes the Set event to be raised (Raises Set Event)">
+    </action>
+    <event name="Set" id="1" description="The value of the count when Report action is raised (Raise,Poll)">
+     <out name="Count" id="1" description="Count value" format="%u" />
+    </event>
+    <event name="_Parent" id="2">
+     <out name="Value" id="1" format="%u" />
+    </event>
+   </device>
+   <device name="VECU_SystemClockPeriodicCounter" id="18">
+    <action name="Minimum" id="1" description="Set the start value for the count">
+     <in name="Min" id="1" description="Minimum count value" format="%u" />
+    </action>
+    <action name="Maximum" id="2" description="Set the maximum value for the count">
+     <in name="Max" id="1" description="Maximum count value" format="%u" />
+    </action>
+    <action name="Set" id="3" description="Set the count value">
+     <in name="Count" id="1" description="Count value" format="%u" />
+    </action>
+    <action name="Start" id="4" description="Enable counting">
+    </action>
+    <action name="Stop" id="5" description="Disable counting">
+    </action>
+    <action name="Report" id="6" description="Causes the Set event to be raised (Raises Set Event)">
+    </action>
+    <event name="Set" id="1" description="The value of the count when Report action is raised (Raise,Poll)">
+     <out name="Count" id="1" description="Count value" format="%u" />
+    </event>
+    <event name="_Parent" id="2">
+     <out name="Value" id="1" format="%u" />
+    </event>
+   </device>
+   <device name="VECU_SystemClockCompare" id="19">
+    <action name="Match" id="1" description="Set the count value at which the match occurs (Raises Match Event)">
+     <in name="Match" id="1" description="Value of count value when match occurs" format="%u" />
+    </action>
+    <action name="Vector" id="2" description="Specify the interrupt vector for the interrupt to raise on match">
+     <in name="Vector" id="1" description="Interrupt vector" format="%u" />
+    </action>
+    <event name="Match" id="1" description="The value at which the match occurred (Raise,Poll)">
+     <out name="Match" id="1" description="Value of count value when match occurs" format="%u" />
+    </event>
+    <event name="_Parent" id="2">
+     <out name="Value" id="1" format="%u" />
+    </event>
+   </device>
+  </description>
+  <ecu_name>AFS.exe</ecu_name>
+ </vecu>
+</vrta>

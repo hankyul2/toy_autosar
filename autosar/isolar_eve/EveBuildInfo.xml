@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><BakeConfiguration>
+<stringAttribute key="VECU_NAME" value="AFS"/>
+<stringAttribute key="ecu_instance" value="/HeadLightSystem/EcuInstance_0"/>
+<stringAttribute key="ecu_arxml_path" value=".\arxml/AFS/HeadLightSystem.arxml"/>
+<stringAttribute key="target" value="WINDOWS"/>
+<stringAttribute key="host" value="127.0.0.1"/>
+<stringAttribute key="xcp_port" value="18041"/>
+<stringAttribute key="rtaos_depends_on_rte" value="true"/>
+<stringAttribute key="freeze_rte" value="false"/>
+<stringAttribute key="freeze_rtaos" value="false"/>
+<stringAttribute key="freeze_mcal" value="false"/>
+<stringAttribute key="freeze_build" value="false"/>
+<stringAttribute key="incremental_build" value="true"/>
+<stringAttribute key="build_config" value="SVNPTEFSX0VWRXx8SVNPTEFSX0VWRV9SVU5USU1F"/>
+<Build>
+<listAttribute key="include_root" value="./src">
+<listEntry value="*.h"/>
+<listEntry value="*.c"/>
+<listEntry value="*.o"/>
+<listEntry value="*.cpp"/>
+<listEntry value="*.hpp"/>
+</listAttribute>
+</Build>
+<MCAL/>
+<RTA-OS>
+<listAttribute key="include_root">
+<listEntry value=".\src/gen/MinGW/RTE/osNeeds.arxml"/>
+<listEntry value=".\arxml/EVE/RTA-OS/osVECU.arxml"/>
+</listAttribute>
+</RTA-OS>
+<RTE>
+<option value="-tsl=128 --samples=swc"/>
+<listAttribute key="include_root">
+<listEntry value=".\arxml/AFS/ECUConf.arxml"/>
+<listEntry value=".\arxml/AFS/RTE_CFG.arxml"/>
+<listEntry value=".\arxml/AFS/Components.arxml"/>
+<listEntry value=".\arxml/AFS/ARPackage_0.arxml"/>
+<listEntry value=".\arxml/AFS/EcuInstance_0_FlatView_SWCD.arxml"/>
+<listEntry value=".\arxml/AFS/Interfaces.arxml"/>
+<listEntry value=".\arxml/AFS/OS_CFG.arxml"/>
+<listEntry value=".\arxml/AFS/LightSystem_EcuExtr.arxml"/>
+<listEntry value=".\arxml/AFS/EcuInstance_0_FlatMap.arxml"/>
+<listEntry value=".\arxml/AFS/HeadLightSystem.arxml"/>
+<listEntry value=".\arxml/AFS/Compositions.arxml"/>
+<listEntry value=".\arxml/AFS/ISOLAR_PlatformTypes.arxml"/>
+</listAttribute>
+</RTE>
+</BakeConfiguration>

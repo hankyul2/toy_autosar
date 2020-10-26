@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vecumodel:VecuProjectNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:vecumodel="http://www.etas.com/vaptools/vap/model/vecumodel" name="AFS" arxml="platform:/resource/AFS/arxml/AFS/HeadLightSystem.arxml" ecuRefPath="/HeadLightSystem/EcuInstance_0?type=EcuInstance" udpPortWin="18041">
+  <vecuTargetMapping vecuProjNodeRef="/">
+    <target ipAddress="localhost" targetType="WIN" serialNumber="win" rtpcName="win"/>
+  </vecuTargetMapping>
+</vecumodel:VecuProjectNode>

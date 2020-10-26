@@ -1,0 +1,61 @@
+Current configuration
+---------------------
+             apptype : "VECU"
+               arxml : "."
+       bakefile_root : "C:/Program Files/ETAS/ISOLAR-EVE3.0/plugins/com.etas.evetools.toolsfolder_1.4.5/Tools/bakefiles"
+           benchmark : false
+             bin_dir : "./VECUs/MinGW/Bin"
+          boa_params : {}
+        build_config : "SVNPTEFSX0VWRXx8SVNPTEFSX0VWRV9SVU5USU1F"
+      custom_devices : []
+               debug : false
+             defines : []
+            fmu_auto : false
+           fmu_files : []
+         fmu_version : "2.0"
+       gcc_c_options : []
+       gcc_l_options : []
+             gen_dir : "./src/gen/MinGW"
+   gen_include_files : ["C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS", "C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTE"]
+     gen_source_dirs : ["C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS", "C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTE"]
+           genws_dir : "./src/gen/MinGW"
+       include_files : ["C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS", "C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTE"]
+        include_path : []
+   incremental_build : true
+                  ip : "127.0.0.1"
+             lib_ext : ".lib"
+           libraries : []
+          mcal_arxml : []
+           mcal_excl : ""
+          mcal_files : []
+ mcal_normalize_root : true
+        mcal_options : []
+       message_files : []
+     mingw_c_options : []
+     mingw_l_options : []
+             modules : [:rtaos, :rtarte, :custom_devices, :message_inject, :xcpgen]
+                name : "AFS"
+             obj_dir : "./VECUs/MinGW/Obj"
+             obj_ext : ".o"
+             out_dir : "./VECUs/MinGW"
+         rtaos_arxml : []
+          rtaos_excl : "osNeeds.arxml"
+         rtaos_files : ["././src/gen/MinGW/RTE/osNeeds.arxml", "././arxml/EVE/RTA-OS/osVECU.arxml"]
+    rtaos_ignore_rte : false
+       rtaos_options : []
+           rte_arxml : []
+            rte_excl : ""
+           rte_files : ["././arxml/AFS/ECUConf.arxml", "././arxml/AFS/RTE_CFG.arxml", "././arxml/AFS/Components.arxml", "././arxml/AFS/ARPackage_0.arxml", "././arxml/AFS/EcuInstance_0_FlatView_SWCD.arxml", "././arxml/AFS/Interfaces.arxml", "././arxml/AFS/OS_CFG.arxml", "././arxml/AFS/LightSystem_EcuExtr.arxml", "././arxml/AFS/EcuInstance_0_FlatMap.arxml", "././arxml/AFS/HeadLightSystem.arxml", "././arxml/AFS/Compositions.arxml", "././arxml/AFS/ISOLAR_PlatformTypes.arxml"]
+         rte_options : ["-tsl=128 --samples=swc"]
+         rte_tracing : false
+          sfunc_auto : false
+         sfunc_files : []
+         source_dirs : ["C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS", "C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTE"]
+                 src : ["./src"]
+              target : "MinGW"
+       vrta_platform : "VRTA-win"
+         vrta_target : "[MinGW]VRTA"
+        vs_c_options : []
+        vs_l_options : []
+              xcp_ip : "127.0.0.1"
+            xcp_port : "18041"

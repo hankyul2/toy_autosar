@@ -1,0 +1,13 @@
+--target:[MinGW]VRTA
+-o[*.h]C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS
+-o[*.c]C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS
+-o[*.hpp]C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS
+-o[*.cpp]C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS
+-o[*.rta]C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS
+-oC:/Users/consi/Desktop/AFS/VECUs/MinGW/Obj
+-I.
+-IC:/Users/consi/Desktop/AFS/src/EVEsrc
+-IC:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS
+--samples:[Includes]overwrite
+--target_option:Run-time license name=ISOLAR_EVE||ISOLAR_EVE_RUNTIME
+C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS/AFS.rtaos

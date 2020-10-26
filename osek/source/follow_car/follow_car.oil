@@ -1,0 +1,157 @@
+#include "implementation.oil"
+
+CPU ATMEL_AT91SAM7S256 {
+  OS LEJOS_OSEK {
+    STATUS = EXTENDED;
+    STARTUPHOOK = FALSE;
+    ERRORHOOK = FALSE;
+    SHUTDOWNHOOK = FALSE;
+    PRETASKHOOK = FALSE;
+    POSTTASKHOOK = FALSE;
+    USEGETSERVICEID = FALSE;
+    USEPARAMETERACCESS = FALSE;
+    USERESSCHEDULER = FALSE;
+  };
+
+  /* Definition of application mode */
+
+  APPMODE appmode1{};
+
+  EVENT ChangeSteerEvent
+  {
+    MASK = AUTO;
+  };
+
+  EVENT ChangeSpeedEvent{
+    MASK = AUTO;
+  };
+
+  TASK DriveTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 5;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  TASK Ultrasonic {
+    AUTOSTART = FALSE;
+    PRIORITY = 2;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  TASK Init {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 9;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  TASK Emergency {
+    AUTOSTART = FALSE;
+    PRIORITY = 9;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  TASK ChangeSteer {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    EVENT = ChangeSteerEvent;
+    PRIORITY = 5;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  TASK ChangeSpeed {
+    AUTOSTART = TRUE{
+      APPMODE = appmode1;
+    };
+    EVENT = ChangeSpeedEvent;
+    PRIORITY = 6;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  TASK Break {
+    AUTOSTART = FALSE;
+    PRIORITY = 7;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  TASK curSpeed {
+    AUTOSTART = FALSE;
+    PRIORITY = 4;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512; /* Stack size */
+  };
+
+  COUNTER SysTimerCnt {
+    MINCYCLE = 1;
+    MAXALLOWEDVALUE = 10000;
+    TICKSPERBASE = 1; /* One tick is equal to 1mc */
+  };
+
+  ALARM Ultrasonic_alarm {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = Ultrasonic;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 50;
+      APPMODE = appmode1;
+    };
+  };
+
+  ALARM Display_alarm {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = DriveTask;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 50;
+      APPMODE = appmode1;
+    };
+  };
+
+  ALARM Break_alarm {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = Break;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 10;
+      APPMODE = appmode1;
+    };
+  };
+
+  // ours
+  ALARM curSPValue_alarm {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = curSpeed;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 50;
+      APPMODE = appmode1;
+    };
+  };
+};

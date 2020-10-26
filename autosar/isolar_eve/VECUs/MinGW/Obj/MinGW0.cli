@@ -1,0 +1,5 @@
+-m32 -g "-IC:/Users/consi/Desktop/AFS/VECUs/MinGW/Obj" -c
+"-IC:/Users/consi/Desktop/AFS/src/EVEsrc"
+"-IC:/Users/consi/Desktop/AFS/src/gen/MinGW/RTAOS"
+"-IC:/Users/consi/Desktop/AFS/src/gen/MinGW/RTE"
+"C:/Users/consi/Desktop/AFS/src/gen/MinGW/RTE/Rte_ECU_ABS_AFS.c"

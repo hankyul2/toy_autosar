@@ -1,0 +1,18 @@
+Dependencies for Project 'ARM_CortexM3_FND', Target 'ARM_CortexM3_NXP': (DO NOT MODIFY !)
+F (.\system_LPC17xx.c)(0x53F444A7)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -IC:\Keil_v5\ARM\INC\NXP\LPC17xx-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP-D__UVISION_VERSION="513"-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475E4F0)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h)(0x5346296A)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x53462B64)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x53462B64)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x53462B64)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x5346296A)
+F (.\startup_LPC17xx.s)(0x5209992A)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP--pd "__UVISION_VERSION SETA 513"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
+F (.\ARM_CortexM3_FND.c)(0x53F4443D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -IC:\Keil_v5\ARM\INC\NXP\LPC17xx-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\NXP-D__UVISION_VERSION="513"-o .\arm_cortexm3_fnd.o --omf_browse .\arm_cortexm3_fnd.crf --depend .\arm_cortexm3_fnd.d)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.H)(0x5346296A)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h)(0x53462B64)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475E4F0)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x53462B64)
+I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x53462B64)
+I (C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h)(0x5346296A)
+I (Delay.H)(0x53EB5211)
+I (FND.H)(0x53F4893E)

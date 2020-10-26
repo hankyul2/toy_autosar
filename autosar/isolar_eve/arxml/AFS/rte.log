@@ -1,0 +1,149 @@
+/********************************************************************/
+/*                                                                  */
+/*                RTE Interface from ISOLAR-A                     */
+/*                                                                  */
+/********************************************************************/
+
+Command Invoked : 
+C:\Program Files\ETAS\ISOLAR-EVE3.0\plugins\com.etas.evetools.toolsfolder_1.4.5\Tools\bin\RTEGen40\RTEGen.exe -q 1 -r /HeadLightSystem/EcuInstance_0 -o [*.*]"C:\Users\consi\Desktop\RTE_CODE"  -tsl=128 --samples=swc -f "C:\Users\consi\Desktop\RTE_CODE\rtegen_files.lst"
+
+########## ETAS RTE Messages Starts here ###########
+
+Command line options: 
+-q 1 -r /HeadLightSystem/EcuInstance_0 -o [*.*]C:\Users\consi\Desktop\RTE_CODE -tsl=128 --samples=swc -f C:\Users\consi\Desktop\RTE_CODE\rtegen_files.lst [ C:\code\AUTOSAR\ARPackage_0.arxml C:\code\AUTOSAR\Components.arxml C:\code\AUTOSAR\Compositions.arxml C:\code\AUTOSAR\ECUConf.arxml C:\code\AUTOSAR\EcuInstance_0_FlatMap.arxml C:\code\AUTOSAR\EcuInstance_0_FlatView_SWCD.arxml C:\code\AUTOSAR\HeadLightSystem.arxml C:\code\AUTOSAR\Interfaces.arxml C:\code\AUTOSAR\ISOLAR_PlatformTypes.arxml C:\code\AUTOSAR\LightSystem_EcuExtr.arxml C:\code\AUTOSAR\OS_CFG.arxml C:\code\AUTOSAR\RTE_CFG.arxml ]
+RTA-RTE v5.8.4 
+Copyright ¨Ï ETAS GmbH 2004-2015
+
+Pre-processor warning set to - pragma message
+>Loading Schema cache...
+<Loading Schema cache... done
+URI(s): http://autosar.org/schema/r4.0
+Phase is RTE (license verified, expires on 24-Dec-2020)
+>Validating XML...
+<Validating XML... done
+>Building types database...
+<Building types database... done
+>Flattening Root Composition...
+>Parsing RTE Configuration...
+<Parsing RTE Configuration... done
+<Flattening Root Composition... done
+>Validating Input...
+<Validating Input... done
+>Determining receive buffers...
+<Determining receive buffers... done
+>Finding modes...
+<Finding modes... done
+>Building reification tree...
+<Building reification tree... done
+>Generating output files...
+<Generating output files... done
+>Processing templates...
+<Processing templates... done
+
+The following files were generated:
+	C:\Users\consi\Desktop\RTE_CODE/Rte.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_HIGHBEAM.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_HIGHBEAM.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_HIGHBEAM_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_LEFTRIGHT_MOTOR.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_LEFTRIGHT_MOTOR.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_LEFTRIGHT_MOTOR_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_LOWBEAM.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_LOWBEAM.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_LOWBEAM_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_UPDOWN_MOTOR.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_UPDOWN_MOTOR.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ACT_UPDOWN_MOTOR_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_HIGHBEAM.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_HIGHBEAM.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_HIGHBEAM_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_LOWBEAM.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_LOWBEAM.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_LOWBEAM_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_MOTOR.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_MOTOR.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_APP_MOTOR_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_BSWMD.arxml
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Catalog.xml
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Cbk.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Cfg.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Const.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_DataHandleType.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ECU_ABS_AFS.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ECU_ABS_AFS.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_ECU_ABS_AFS_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Hook.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Intl.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Lib.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Main.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_McSupportData.arxml
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Os_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_DISTANCE.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_DISTANCE.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_DISTANCE_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_LIGHT.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_LIGHT.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_LIGHTMODE.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_LIGHTMODE.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_LIGHTMODE_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_LIGHT_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_SPEED.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_SPEED.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_SPEED_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_STEERINGANGLE.c
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_STEERINGANGLE.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_SENSOR_STEERINGANGLE_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/Rte_Type.h
+	C:\Users\consi\Desktop\RTE_CODE/TAKS_ECU_SPEED.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_HIGHBEAM_RECEIVE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_HIGHBEAM_SEND.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_LEFTRIGHTANGLE_RECEIVE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_LEFTRIGHTANGLE_SEND.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_LOWBEAM_RECEIVE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_LOWBEAM_SEND.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_UPDOWNANGLE_RECEIVE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ACT_UPDOWNANGLE_SEND.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_APP_HIGHBEAM.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_APP_LOWBEAM.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_APP_MOTOR.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ECU_ACTUATOR.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ECU_DISTANCE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ECU_LIGHT.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_ECU_LIGHTMODE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_EUC_STEERINGANGLE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_SENSOR_DISTANCE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_SENSOR_LIGHT.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_SENSOR_LIGHTMODE.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_SENSOR_SPEED.c
+	C:\Users\consi\Desktop\RTE_CODE/TASK_SENSOR_STEERINGANGLE.c
+	C:\Users\consi\Desktop\RTE_CODE/osNeeds.arxml
+	C:\Users\consi\Desktop\RTE_CODE/rta-com.oil
+	C:\Users\consi\Desktop\RTE_CODE/rte_measurable.xml
+
+
+########### ETAS RTE Messages Ends here ############
+
+I15-1564: file: C:\code\AUTOSAR\Components.arxml, line: 278          Generation information -- RTE Event 'OIE_HIGHBEAM_SEND' within           SW-C instance           '/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ACT_HIGHBEAM'           is mapped to a task but can be optimized to a direct call. Remove           the mapping to generate a more optimal solution.
+I15-1564: file: C:\code\AUTOSAR\Components.arxml, line: 349          Generation information -- RTE Event 'OIE_LOWBEAM_SEND' within SW-C           instance           '/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ACT_LOWBEAM'           is mapped to a task but can be optimized to a direct call. Remove           the mapping to generate a more optimal solution.
+I15-1564: file: C:\code\AUTOSAR\Components.arxml, line: 404          Generation information -- RTE Event 'OIE_UPDOWNANGLE_SEND' within           SW-C instance           '/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ACT_UPDOWN_MOTOR'           is mapped to a task but can be optimized to a direct call. Remove           the mapping to generate a more optimal solution.
+I15-1564: file: C:\code\AUTOSAR\Components.arxml, line: 475          Generation information -- RTE Event 'OIE_LEFTRIGHTANGLE_SEND'           within SW-C instance           '/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ACT_LEFTRIGHT_MOTOR'           is mapped to a task but can be optimized to a direct call. Remove           the mapping to generate a more optimal solution.
+I53-6910: Configuration information -- Counter Rte_TOutCounter must be           ticked at 1 ms.
+I53-6910: Configuration information -- Counter Rte_TickCounter must be           ticked at 100 ms.
+W21-1145: Parameter warning -- The number of tool-chain significant           characters has been set on both the command line and the ECU           configuration file. The value '128' specified on the command line           has been used.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_HIGHBEAM_RECEIVE specifies an activation limit of 1           however RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_HIGHBEAM_SEND specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_LEFTRIGHTANGLE_RECEIVE specifies an activation limit of 1           however RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_LEFTRIGHTANGLE_SEND specifies an activation limit of 1           however RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_LOWBEAM_RECEIVE specifies an activation limit of 1           however RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_LOWBEAM_SEND specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_UPDOWNANGLE_RECEIVE specifies an activation limit of 1           however RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ACT_UPDOWNANGLE_SEND specifies an activation limit of 1           however RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_APP_HIGHBEAM specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_APP_LOWBEAM specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ECU_DISTANCE specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_ECU_LIGHTMODE specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task           TASK_EUC_STEERINGANGLE specifies an activation limit of 1 however           RTA-RTE has calculated that it requires a limit of 2. The           calculated figure has not been output.
+W52-6930: Configuration warning -- The configuration for Task TAKS_ECU_SPEED           specifies an activation limit of 1 however RTA-RTE has calculated           that it requires a limit of 2. The calculated figure has not been           output.
+W52-6930: Configuration warning -- The configuration for Task TASK_APP_MOTOR           specifies an activation limit of 1 however RTA-RTE has calculated           that it requires a limit of 2. The calculated figure has not been           output.
+W52-6930: Configuration warning -- The configuration for Task TASK_ECU_LIGHT           specifies an activation limit of 1 however RTA-RTE has calculated           that it requires a limit of 2. The calculated figure has not been           output.

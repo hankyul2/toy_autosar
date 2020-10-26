@@ -1,0 +1,2801 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-2.xsd">
+   <!-- BSW Module Description report file from RTA-RTE v5.8.4  -->
+   <AR-PACKAGES>
+      <AR-PACKAGE>
+         <SHORT-NAME>AUTOSAR_Rte</SHORT-NAME>
+         <REFERENCE-BASES>
+            <!-- Note: ReferenceBases must be unique in a package according to
+                 constr_2509 in AUTOSAR_TPS_GenericStructureTemplate so these
+                 must have different shortLabels to their counterparts in the
+                 McSupportData.
+                 -->
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_BswImplementations</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/BswImplementations</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_BswModuleDescriptions</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/BswModuleDescriptions</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_CompuMethods</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/CompuMethods</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_DataConstrs</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/DataConstrs</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_ImplementationDataTypes</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/ImplementationDataTypes</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_SwAddrMethods</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/SwAddrMethods</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_SwBaseTypes</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/SwBaseTypes</PACKAGE-REF>
+            </REFERENCE-BASE>
+            <REFERENCE-BASE>
+               <SHORT-LABEL>Rte_BSWMD_Units</SHORT-LABEL>
+               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Rte/Units</PACKAGE-REF>
+            </REFERENCE-BASE>
+         </REFERENCE-BASES>
+         <AR-PACKAGES>
+            <!-- Module Description -->
+            <AR-PACKAGE>
+               <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+               <ELEMENTS>
+                 <BSW-MODULE-DESCRIPTION>
+                     <SHORT-NAME>RteBswModuleDescription</SHORT-NAME>
+                     <PROVIDED-ENTRYS>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/Rte_Start</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/Rte_Stop</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/SchM_DeInit</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/SchM_Init</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                     </PROVIDED-ENTRYS>
+                     <OUTGOING-CALLBACKS>
+                     </OUTGOING-CALLBACKS>
+                     <BSW-MODULE-DEPENDENCYS>
+                        <BSW-MODULE-DEPENDENCY>
+                          <SHORT-NAME>ModDepOS</SHORT-NAME>
+                          <TARGET-MODULE-ID>001</TARGET-MODULE-ID>
+                          <REQUIRED-ENTRYS>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/ActivateTask</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/CancelAlarm</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/ClearEvent</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/GetEvent</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/GetResource</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/GetTaskID</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/ReleaseResource</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/ResumeOSInterrupts</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/SetEvent</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/SetRelAlarm</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/SuspendOSInterrupts</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/TerminateTask</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                            <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                              <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR/OS/WaitEvent</BSW-MODULE-ENTRY-REF>
+                            </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          </REQUIRED-ENTRYS>
+                        </BSW-MODULE-DEPENDENCY>
+                     </BSW-MODULE-DEPENDENCYS>
+                     <INTERNAL-BEHAVIORS>
+                       <BSW-INTERNAL-BEHAVIOR>
+                           <SHORT-NAME>RteInternalBehavior</SHORT-NAME>
+                             <CONSTANT-MEMORYS>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_ACT_HIGHBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_HIGHBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_ACT_LEFTRIGHT_MOTOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_LEFTRIGHT_MOTOR</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_ACT_LOWBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_LOWBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_ACT_UPDOWN_MOTOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_UPDOWN_MOTOR</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_APP_HIGHBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_APP_HIGHBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_APP_LOWBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_APP_LOWBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_APP_MOTOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_APP_MOTOR</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_ECU_ABS_AFS</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ECU_ABS_AFS</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_SENSOR_DISTANCE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_DISTANCE</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_SENSOR_LIGHT</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_LIGHT</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_SENSOR_LIGHTMODE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_LIGHTMODE</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_SENSOR_SPEED</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_SPEED</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Inst_SENSOR_STEERINGANGLE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_STEERINGANGLE</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QTaskType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_HIGHBEAMMODE_FROM_ACT_HIGHBEAM_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QWWPType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_HIGHBEAMMODE_FROM_ACT_HIGHBEAM_OPER_ACT_TO_ECU_wowp</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WOWP_NotificationType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LEFTRIGHTANGLE_FROM_ACT_LEFTRIGHT_MOTOR_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QWWPType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LEFTRIGHTANGLE_FROM_ACT_LEFTRIGHT_MOTOR_OPER_ACT_TO_ECU_wowp</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WOWP_NotificationType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LOWBEAMMODE_FROM_ACT_LOWBEAM_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QWWPType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LOWBEAMMODE_FROM_ACT_LOWBEAM_OPER_ACT_TO_ECU_wowp</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WOWP_NotificationType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_UPDOWNANGLE_FROM_ACT_UPDOWN_MOTOR_OPER_ACT_TO_ECU</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QWWPType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_UPDOWNANGLE_FROM_ACT_UPDOWN_MOTOR_OPER_ACT_TO_ECU_wowp</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WOWP_NotificationType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_DISTANCE_R_DISTANCE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDRAType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_LIGHTMODE_R_LIGHTMODE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDRAType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_LIGHT_R_LIGHT_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDRAType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_SPEED_R_SPEED_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDRAType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_STEERINGANGLE_R_STEERINGANGLE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDRAType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_ACT_HIGHBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_ACT_HIGHBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_ACT_LEFTRIGHT_MOTOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_ACT_LEFTRIGHT_MOTOR</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_ACT_LOWBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_ACT_LOWBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_ACT_UPDOWN_MOTOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_ACT_UPDOWN_MOTOR</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_APP_HIGHBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_APP_HIGHBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_APP_LOWBEAM</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_APP_LOWBEAM</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_APP_MOTOR</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_APP_MOTOR</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_ECU_ABS_AFS</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_ECU_ABS_AFS</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_SENSOR_DISTANCE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_SENSOR_DISTANCE</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_SENSOR_LIGHT</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_SENSOR_LIGHT</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_SENSOR_LIGHTMODE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_SENSOR_LIGHTMODE</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_SENSOR_SPEED</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_SENSOR_SPEED</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Self_CPT_SENSOR_STEERINGANGLE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_SelfType_SENSOR_STEERINGANGLE</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Tasks</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_TaskInfo</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                              <PARAMETER-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_TimeoutAlarms</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_AlarmRefType</TYPE-TREF>
+                              </PARAMETER-DATA-PROTOTYPE>
+                           </CONSTANT-MEMORYS>
+                           <STATIC-MEMORYS>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>CPT_ACT_HIGHBEAM_IB_ACT_HIGHBEAM_Explicit_VariableDataPrototype_0</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>CPT_ACT_LEFTRIGHT_MOTOR_IB_ACT_LEFTRIGHT_MOTOR_Explicit_VariableDataPrototype_0</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>CPT_ACT_LOWBEAM_IB_ACT_LOWBEAM_Explicit_VariableDataPrototype_0</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>CPT_ACT_UPDOWN_MOTOR_IB_ACT_UPDOWN_MOTOR_Explicit_VariableDataPrototype_0</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_ACT_HIGHBEAM_DRE_HIGHBEAM_RECEIVE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_ACT_LEFTRIGHT_MOTOR_DRE_LEFTRIGHTANGLE_RECEIVE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_ACT_LOWBEAM_DRE_LOWBEAM_RECEIVE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_ACT_UPDOWN_MOTOR_DRE_UPDOWNANGLE_RECEIVE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_HIGHBEAM_DRE_DISTANCE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_HIGHBEAM_DRE_LIGHTMODE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_LOWBEAM_DRE_DISTANCE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_LOWBEAM_DRE_LIGHT</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_LOWBEAM_DRE_LIGHTMODE</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_LOWBEAM_DRE_SPEED</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_MOTOR_DRE_SPEED</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_ActCount_CPT_APP_MOTOR_DRE_STEERING</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_REActCounterType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Event_CPT_ECU_ABS_AFS_R_HIGHBEAMMODE_FROM_ACT_HIGHBEAM_OPER_ACT_TO_ECU_wd</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WaitableDatum</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Event_CPT_ECU_ABS_AFS_R_LEFTRIGHTANGLE_FROM_ACT_LEFTRIGHT_MOTOR_OPER_ACT_TO_ECU_wd</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WaitableDatum</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Event_CPT_ECU_ABS_AFS_R_LOWBEAMMODE_FROM_ACT_LOWBEAM_OPER_ACT_TO_ECU_wd</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WaitableDatum</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Event_CPT_ECU_ABS_AFS_R_UPDOWNANGLE_FROM_ACT_UPDOWN_MOTOR_OPER_ACT_TO_ECU_wd</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_WaitableDatum</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR_QEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR_dyn</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_HIGHBEAMMODE_FROM_ACT_HIGHBEAM_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_HIGHBEAMMODE_FROM_ACT_HIGHBEAM_OPER_ACT_TO_ECU_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LEFTRIGHTANGLE_FROM_ACT_LEFTRIGHT_MOTOR_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LEFTRIGHTANGLE_FROM_ACT_LEFTRIGHT_MOTOR_OPER_ACT_TO_ECU_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LOWBEAMMODE_FROM_ACT_LOWBEAM_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_LOWBEAMMODE_FROM_ACT_LOWBEAM_OPER_ACT_TO_ECU_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_UPDOWNANGLE_FROM_ACT_UPDOWN_MOTOR_OPER_ACT_TO_ECU_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_ECU_ABS_AFS_R_UPDOWNANGLE_FROM_ACT_UPDOWN_MOTOR_OPER_ACT_TO_ECU_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_DISTANCE_R_DISTANCE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_DISTANCE_R_DISTANCE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_LIGHTMODE_R_LIGHTMODE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_LIGHTMODE_R_LIGHTMODE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_LIGHT_R_LIGHT_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_LIGHT_R_LIGHT_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_SPEED_R_SPEED_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_SPEED_R_SPEED_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_STEERINGANGLE_R_STEERINGANGLE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_data</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR_RtnQEType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Queue_CPT_SENSOR_STEERINGANGLE_R_STEERINGANGLE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_dynamic</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QDynType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Var_CPT_SENSOR_DISTANCE_R_DISTANCE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_outstanding</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Var_CPT_SENSOR_LIGHTMODE_R_LIGHTMODE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_outstanding</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Var_CPT_SENSOR_LIGHT_R_LIGHT_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_outstanding</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Var_CPT_SENSOR_SPEED_R_SPEED_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_outstanding</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Var_CPT_SENSOR_STEERINGANGLE_R_STEERINGANGLE_FROM_ECU_ABS_AFS_OPER_ECU_TO_SENSOR_outstanding</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>Rte_Var_TASK_ECU_ACTUATORWaitingEv</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_EventType</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_APP_TO_ACT</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_APP_TO_ACT_0</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_APP_TO_ACT_1</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_APP_TO_ACT_2</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_0</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_1</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_2</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_3</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_4</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_5</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                              <VARIABLE-DATA-PROTOTYPE>
+                                <SHORT-NAME>VDP_SENSOR_TO_APP_6</SHORT-NAME>
+                                <TYPE-TREF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</TYPE-TREF>
+                              </VARIABLE-DATA-PROTOTYPE>
+                           </STATIC-MEMORYS>
+                           <ENTITYS>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>BCERte_Start</SHORT-NAME>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/Rte_Start</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>BCERte_Stop</SHORT-NAME>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/Rte_Stop</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>BCESchM_DeInit</SHORT-NAME>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/SchM_DeInit</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                              <BSW-CALLED-ENTITY>
+                                <SHORT-NAME>BCESchM_Init</SHORT-NAME>
+                                <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Rte/BswModuleEntrys/SchM_Init</IMPLEMENTED-ENTRY-REF>
+                              </BSW-CALLED-ENTITY>
+                           </ENTITYS>
+                        </BSW-INTERNAL-BEHAVIOR>
+                     </INTERNAL-BEHAVIORS>
+                  </BSW-MODULE-DESCRIPTION>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+               <ELEMENTS>
+                  <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>Rte_Start</SHORT-NAME>
+                  </BSW-MODULE-ENTRY>
+                  <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>Rte_Stop</SHORT-NAME>
+                  </BSW-MODULE-ENTRY>
+                  <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>SchM_DeInit</SHORT-NAME>
+                  </BSW-MODULE-ENTRY>
+                  <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>SchM_Init</SHORT-NAME>
+                  </BSW-MODULE-ENTRY>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>BswImplementations</SHORT-NAME>
+               <ELEMENTS>
+                  <BSW-IMPLEMENTATION>
+                    <SHORT-NAME>Rte</SHORT-NAME>
+                    <GENERATED-ARTIFACTS>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>ACT_HIGHBEAM_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>ACT_HIGHBEAM_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>ACT_LEFTRIGHT_MOTOR_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>ACT_LEFTRIGHT_MOTOR_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>ACT_LOWBEAM_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>ACT_LOWBEAM_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>ACT_UPDOWN_MOTOR_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>ACT_UPDOWN_MOTOR_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>APP_HIGHBEAM_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>APP_HIGHBEAM_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>APP_LOWBEAM_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>APP_LOWBEAM_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>APP_MOTOR_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>APP_MOTOR_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Com_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Com_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>ECU_ABS_AFS_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>ECU_ABS_AFS_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Ioc_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Ioc_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>NvM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>NvM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Os_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Os_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_HIGHBEAM_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_HIGHBEAM_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_HIGHBEAM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_HIGHBEAM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_HIGHBEAM_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_HIGHBEAM_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_LEFTRIGHT_MOTOR_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_LEFTRIGHT_MOTOR_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_LEFTRIGHT_MOTOR_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_LEFTRIGHT_MOTOR_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_LEFTRIGHT_MOTOR_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_LEFTRIGHT_MOTOR_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_LOWBEAM_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_LOWBEAM_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_LOWBEAM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_LOWBEAM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_LOWBEAM_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_LOWBEAM_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_UPDOWN_MOTOR_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_UPDOWN_MOTOR_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_UPDOWN_MOTOR_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_UPDOWN_MOTOR_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ACT_UPDOWN_MOTOR_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ACT_UPDOWN_MOTOR_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_HIGHBEAM_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_HIGHBEAM_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_HIGHBEAM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_HIGHBEAM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_HIGHBEAM_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_HIGHBEAM_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_LOWBEAM_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_LOWBEAM_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_LOWBEAM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_LOWBEAM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_LOWBEAM_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_LOWBEAM_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_MOTOR_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_MOTOR_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_MOTOR_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_MOTOR_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_APP_MOTOR_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_APP_MOTOR_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Cbk_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Cbk_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Cfg_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Cfg_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Const_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Const_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_DataHandleType_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_DataHandleType_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ECU_ABS_AFS_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ECU_ABS_AFS_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ECU_ABS_AFS_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ECU_ABS_AFS_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_ECU_ABS_AFS_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_ECU_ABS_AFS_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Hook_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Hook_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Intl_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Intl_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Lib_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Lib_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Main_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Main_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_DISTANCE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_DISTANCE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_DISTANCE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_DISTANCE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_DISTANCE_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_DISTANCE_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_LIGHT_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_LIGHT_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_LIGHT_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_LIGHT_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_LIGHTMODE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_LIGHTMODE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_LIGHTMODE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_LIGHTMODE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_LIGHTMODE_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_LIGHTMODE_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_LIGHT_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_LIGHT_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_SPEED_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_SPEED_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_SPEED_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_SPEED_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_SPEED_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_SPEED_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_STEERINGANGLE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_STEERINGANGLE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_STEERINGANGLE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_STEERINGANGLE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_SENSOR_STEERINGANGLE_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_SENSOR_STEERINGANGLE_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>Rte_Type_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>Rte_Type_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>SENSOR_DISTANCE_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>SENSOR_DISTANCE_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>SENSOR_LIGHTMODE_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>SENSOR_LIGHTMODE_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>SENSOR_LIGHT_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>SENSOR_LIGHT_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>SENSOR_SPEED_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>SENSOR_SPEED_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>SENSOR_STEERINGANGLE_MemMap_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>SENSOR_STEERINGANGLE_MemMap_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TAKS_ECU_SPEED_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TAKS_ECU_SPEED_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TAKS_ECU_SPEED_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TAKS_ECU_SPEED_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_HIGHBEAM_RECEIVE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_HIGHBEAM_RECEIVE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_HIGHBEAM_RECEIVE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_HIGHBEAM_RECEIVE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_HIGHBEAM_SEND_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_HIGHBEAM_SEND_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_HIGHBEAM_SEND_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_HIGHBEAM_SEND_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LEFTRIGHTANGLE_RECEIVE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LEFTRIGHTANGLE_RECEIVE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LEFTRIGHTANGLE_RECEIVE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LEFTRIGHTANGLE_RECEIVE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LEFTRIGHTANGLE_SEND_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LEFTRIGHTANGLE_SEND_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LEFTRIGHTANGLE_SEND_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LEFTRIGHTANGLE_SEND_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LOWBEAM_RECEIVE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LOWBEAM_RECEIVE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LOWBEAM_RECEIVE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LOWBEAM_RECEIVE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LOWBEAM_SEND_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LOWBEAM_SEND_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_LOWBEAM_SEND_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_LOWBEAM_SEND_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_UPDOWNANGLE_RECEIVE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_UPDOWNANGLE_RECEIVE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_UPDOWNANGLE_RECEIVE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_UPDOWNANGLE_RECEIVE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_UPDOWNANGLE_SEND_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_UPDOWNANGLE_SEND_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ACT_UPDOWNANGLE_SEND_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ACT_UPDOWNANGLE_SEND_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_APP_HIGHBEAM_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_APP_HIGHBEAM_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_APP_HIGHBEAM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_APP_HIGHBEAM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_APP_LOWBEAM_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_APP_LOWBEAM_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_APP_LOWBEAM_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_APP_LOWBEAM_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_APP_MOTOR_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_APP_MOTOR_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_APP_MOTOR_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_APP_MOTOR_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_ACTUATOR_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_ACTUATOR_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_ACTUATOR_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_ACTUATOR_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_DISTANCE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_DISTANCE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_DISTANCE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_DISTANCE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_LIGHT_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_LIGHT_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_LIGHT_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_LIGHT_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_LIGHTMODE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_LIGHTMODE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_ECU_LIGHTMODE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_ECU_LIGHTMODE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_EUC_STEERINGANGLE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_EUC_STEERINGANGLE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_EUC_STEERINGANGLE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_EUC_STEERINGANGLE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_DISTANCE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_DISTANCE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_DISTANCE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_DISTANCE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_LIGHT_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_LIGHT_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_LIGHT_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_LIGHT_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_LIGHTMODE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_LIGHTMODE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_LIGHTMODE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_LIGHTMODE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_SPEED_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_SPEED_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_SPEED_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_SPEED_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_STEERINGANGLE_c</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_STEERINGANGLE_c</SHORT-LABEL>
+                          <CATEGORY>SWSRC</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                      <DEPENDENCY-ON-ARTIFACT>
+                        <SHORT-NAME>TASK_SENSOR_STEERINGANGLE_h</SHORT-NAME>
+                        <ARTIFACT-DESCRIPTOR>
+                          <SHORT-LABEL>TASK_SENSOR_STEERINGANGLE_h</SHORT-LABEL>
+                          <CATEGORY>SWHDR</CATEGORY>
+                          <DOMAIN>AUTOSAR</DOMAIN>
+                        </ARTIFACT-DESCRIPTOR>
+                      </DEPENDENCY-ON-ARTIFACT>
+                    </GENERATED-ARTIFACTS>
+                    <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                    <RESOURCE-CONSUMPTION>
+                      <SHORT-NAME>ResConsumption</SHORT-NAME>
+                      <MEMORY-SECTIONS>
+                        <MEMORY-SECTION>
+                          <SHORT-NAME>CODE</SHORT-NAME>
+                          <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                          <SW-ADDRMETHOD-REF BASE="Rte_BSWMD_SwAddrMethods" DEST="SW-ADDR-METHOD">CODE</SW-ADDRMETHOD-REF>
+                        </MEMORY-SECTION>
+                        <MEMORY-SECTION>
+                          <SHORT-NAME>CONST_UNSPECIFIED</SHORT-NAME>
+                          <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                          <SW-ADDRMETHOD-REF BASE="Rte_BSWMD_SwAddrMethods" DEST="SW-ADDR-METHOD">CONST_UNSPECIFIED</SW-ADDRMETHOD-REF>
+                        </MEMORY-SECTION>
+                        <MEMORY-SECTION>
+                          <SHORT-NAME>TASKBODY</SHORT-NAME>
+                          <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                          <SW-ADDRMETHOD-REF BASE="Rte_BSWMD_SwAddrMethods" DEST="SW-ADDR-METHOD">TASKBODY</SW-ADDRMETHOD-REF>
+                        </MEMORY-SECTION>
+                        <MEMORY-SECTION>
+                          <SHORT-NAME>VAR_32BIT</SHORT-NAME>
+                          <ALIGNMENT>32</ALIGNMENT>
+                          <SW-ADDRMETHOD-REF BASE="Rte_BSWMD_SwAddrMethods" DEST="SW-ADDR-METHOD">VAR_32BIT</SW-ADDRMETHOD-REF>
+                        </MEMORY-SECTION>
+                        <MEMORY-SECTION>
+                          <SHORT-NAME>VAR_8BIT</SHORT-NAME>
+                          <ALIGNMENT>8</ALIGNMENT>
+                          <SW-ADDRMETHOD-REF BASE="Rte_BSWMD_SwAddrMethods" DEST="SW-ADDR-METHOD">VAR_8BIT</SW-ADDRMETHOD-REF>
+                        </MEMORY-SECTION>
+                        <MEMORY-SECTION>
+                          <SHORT-NAME>VAR_UNSPECIFIED</SHORT-NAME>
+                          <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                          <SW-ADDRMETHOD-REF BASE="Rte_BSWMD_SwAddrMethods" DEST="SW-ADDR-METHOD">VAR_UNSPECIFIED</SW-ADDRMETHOD-REF>
+                        </MEMORY-SECTION>
+                      </MEMORY-SECTIONS>
+                    </RESOURCE-CONSUMPTION>
+                    <SW-VERSION>0.0.0</SW-VERSION>
+                    <USED-CODE-GENERATOR>ETAS RTEGen</USED-CODE-GENERATOR>
+                    <AR-RELEASE-VERSION>4.0.0</AR-RELEASE-VERSION>
+                    <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Rte/BswModuleDescriptions/RteBswModuleDescription/RteInternalBehavior</BEHAVIOR-REF>
+                  </BSW-IMPLEMENTATION>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>Units</SHORT-NAME>
+               <ELEMENTS>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>CompuMethods</SHORT-NAME>
+               <ELEMENTS>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>DataConstrs</SHORT-NAME>
+               <ELEMENTS>
+                  <DATA-CONSTR UUID="5f822502-5574-4d9c-a47c-15f8169f30be">
+                    <!--Was /AUTOSAR_PlatformTypes/DataConstraints/DataConstr_sint32-->
+                    <!--Referenced by Type sint32-->
+                    <SHORT-NAME>DataConstraints_DataConstr_sint32</SHORT-NAME>
+                    <DATA-CONSTR-RULES>
+                      <DATA-CONSTR-RULE>
+                        <PHYS-CONSTRS>
+                          <LOWER-LIMIT>-2147483648</LOWER-LIMIT>
+                          <UPPER-LIMIT>2147483647</UPPER-LIMIT>
+                        </PHYS-CONSTRS>
+                        <INTERNAL-CONSTRS>
+                          <LOWER-LIMIT>-2147483648</LOWER-LIMIT>
+                          <UPPER-LIMIT>2147483647</UPPER-LIMIT>
+                        </INTERNAL-CONSTRS>
+                      </DATA-CONSTR-RULE>
+                    </DATA-CONSTR-RULES>
+                  </DATA-CONSTR>
+                  <DATA-CONSTR UUID="13469372-fe37-4543-ab90-f76a2fa79110">
+                    <!--Was /AUTOSAR_PlatformTypes/DataConstraints/DataConstr_uint8-->
+                    <!--Referenced by Type uint8-->
+                    <SHORT-NAME>DataConstraints_DataConstr_uint8</SHORT-NAME>
+                    <DATA-CONSTR-RULES>
+                      <DATA-CONSTR-RULE>
+                        <PHYS-CONSTRS>
+                          <LOWER-LIMIT>0</LOWER-LIMIT>
+                          <UPPER-LIMIT>255</UPPER-LIMIT>
+                        </PHYS-CONSTRS>
+                        <INTERNAL-CONSTRS>
+                          <LOWER-LIMIT>0</LOWER-LIMIT>
+                          <UPPER-LIMIT>255</UPPER-LIMIT>
+                        </INTERNAL-CONSTRS>
+                      </DATA-CONSTR-RULE>
+                    </DATA-CONSTR-RULES>
+                  </DATA-CONSTR>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+               <ELEMENTS>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>sint32</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <BASE-TYPE-REF BASE="Rte_BSWMD_SwBaseTypes" DEST="SW-BASE-TYPE">sint32</BASE-TYPE-REF>
+                          <DATA-CONSTR-REF BASE="Rte_BSWMD_DataConstrs" DEST="DATA-CONSTR">DataConstraints_DataConstr_sint32</DATA-CONSTR-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_REActCounterType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_WaitableDatum</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>uint8</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <BASE-TYPE-REF BASE="Rte_BSWMD_SwBaseTypes" DEST="SW-BASE-TYPE">uint8</BASE-TYPE-REF>
+                          <DATA-CONSTR-REF BASE="Rte_BSWMD_DataConstrs" DEST="DATA-CONSTR">DataConstraints_DataConstr_uint8</DATA-CONSTR-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_ACT_HIGHBEAM</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_ACT_LEFTRIGHT_MOTOR</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_ACT_LOWBEAM</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_ACT_UPDOWN_MOTOR</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_APP_HIGHBEAM</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_APP_LOWBEAM</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_APP_MOTOR</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_ECU_ABS_AFS</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_SENSOR_DISTANCE</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_SENSOR_LIGHT</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_SENSOR_LIGHTMODE</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_SENSOR_SPEED</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CDS_SENSOR_STEERINGANGLE</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>_dummy</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_QTaskType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_QCmnRefType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_QDynType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR_QEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>clientQueue</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_QCmnRefType</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_QWWPType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_HIGHBEAM_P_HIGBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_WOWP_NotificationType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_LEFTRIGHT_MOTOR_P_LEFTRIGHTANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_LOWBEAM_P_LOWBEAMMODE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ACT_UPDOWN_MOTOR_P_UPDOWNANGLE_TO_ECU_ABS_AFS_OPER_ACT_TO_ECU_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ACT_TO_ECU</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_QDRAType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_DISTANCE_TO_SENSOR_DISTANCE_OPER_ECU_TO_SENSOR_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_LIGHTMODE_TO_SENSOR_LIGHTMODE_OPER_ECU_TO_SENSOR_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_LIGHT_TO_SENSOR_LIGHT_OPER_ECU_TO_SENSOR_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_SPEED_TO_SENSOR_SPEED_OPER_ECU_TO_SENSOR_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_CPT_ECU_ABS_AFS_P_STEERINGALGLE_TO_SENSOR_STERRINGANGLE_OPER_ECU_TO_SENSOR_RtnQEType</SHORT-NAME>
+                    <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ADP_ECU_TO_SENSOR</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">sint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_ACT_HIGHBEAM</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_HIGHBEAM</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_ACT_LEFTRIGHT_MOTOR</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_LEFTRIGHT_MOTOR</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_ACT_LOWBEAM</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_LOWBEAM</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_ACT_UPDOWN_MOTOR</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ACT_UPDOWN_MOTOR</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_APP_HIGHBEAM</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_APP_HIGHBEAM</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_APP_LOWBEAM</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_APP_LOWBEAM</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_APP_MOTOR</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_APP_MOTOR</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_ECU_ABS_AFS</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_ECU_ABS_AFS</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_SENSOR_DISTANCE</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_DISTANCE</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_SENSOR_LIGHT</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_LIGHT</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_SENSOR_LIGHTMODE</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_LIGHTMODE</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_SENSOR_SPEED</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_SPEED</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_SelfType_SENSOR_STEERINGANGLE</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <LABEL>
+                                <L-4 L="EN">Written By</L-4>
+                              </LABEL>
+                              <ANNOTATION-ORIGIN>ETAS RTEGen</ANNOTATION-ORIGIN>
+                              <ANNOTATION-TEXT>
+                                <P>
+                                  <L-1 L="EN">SwDataDefProps written by RTEGen</L-1>
+                                </P>
+                              </ANNOTATION-TEXT>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <IMPLEMENTATION-DATA-TYPE-REF BASE="Rte_BSWMD_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">Rte_CDS_SENSOR_STEERINGANGLE</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_TaskInfo</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_AlarmRefType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+                  <IMPLEMENTATION-DATA-TYPE>
+                    <SHORT-NAME>Rte_EventType</SHORT-NAME>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <INTRODUCTION>
+                      <P>
+                        <L-1 L="UK">This is an external type, i.e. it is declared in the Rte Library and not in the XML. RTEGen does not have any information about this type apart from its name.</L-1>
+                      </P>
+                    </INTRODUCTION>
+                  </IMPLEMENTATION-DATA-TYPE>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+               <ELEMENTS>
+                  <SW-ADDR-METHOD>
+                    <SHORT-NAME>CODE</SHORT-NAME>
+                    <SECTION-TYPE>CODE</SECTION-TYPE>
+                  </SW-ADDR-METHOD>
+                  <SW-ADDR-METHOD>
+                    <SHORT-NAME>CONST_UNSPECIFIED</SHORT-NAME>
+                    <SECTION-TYPE>CONST</SECTION-TYPE>
+                  </SW-ADDR-METHOD>
+                  <SW-ADDR-METHOD>
+                    <SHORT-NAME>TASKBODY</SHORT-NAME>
+                    <SECTION-TYPE>CODE</SECTION-TYPE>
+                  </SW-ADDR-METHOD>
+                  <SW-ADDR-METHOD>
+                    <SHORT-NAME>VAR_32BIT</SHORT-NAME>
+                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                  </SW-ADDR-METHOD>
+                  <SW-ADDR-METHOD>
+                    <SHORT-NAME>VAR_8BIT</SHORT-NAME>
+                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                  </SW-ADDR-METHOD>
+                  <SW-ADDR-METHOD>
+                    <SHORT-NAME>VAR_UNSPECIFIED</SHORT-NAME>
+                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                  </SW-ADDR-METHOD>
+               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+               <SHORT-NAME>SwBaseTypes</SHORT-NAME>
+               <ELEMENTS>
+                  <SW-BASE-TYPE UUID="a08aab17-f34e-4e13-8eb5-8ab91238f8dc">
+                    <!--Was /AUTOSAR_PlatformTypes/SwBaseTypes/sint32-->
+                    <!--Referenced by Type sint32-->
+                    <SHORT-NAME>sint32</SHORT-NAME>
+                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                    <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+                    <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+                  </SW-BASE-TYPE>
+                  <SW-BASE-TYPE UUID="173e2645-ddb9-471d-bf5d-6baa84afc430">
+                    <!--Was /AUTOSAR_PlatformTypes/SwBaseTypes/uint8-->
+                    <!--Referenced by Type uint8-->
+                    <SHORT-NAME>uint8</SHORT-NAME>
+                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                    <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                    <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                  </SW-BASE-TYPE>
+               </ELEMENTS>
+            </AR-PACKAGE>
+         </AR-PACKAGES>
+      </AR-PACKAGE>
+   </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,24 @@
+-o=[*.xml]./src/gen/MinGW/RTE
+-o=[*.oil]./src/gen/MinGW/RTE
+-o=[*.arxml]./src/gen/MinGW/RTE
+-o=[*.*]./src/gen/MinGW/RTE
+--samples=memmap
+-tsl=128
+--os-output-param=all
+-q 2
+-nts
+-r auto
+--os-define-osenv=RTAOS40
+-tsl=128 --samples=swc
+"././arxml/AFS/ECUConf.arxml"
+"././arxml/AFS/RTE_CFG.arxml"
+"././arxml/AFS/Components.arxml"
+"././arxml/AFS/ARPackage_0.arxml"
+"././arxml/AFS/EcuInstance_0_FlatView_SWCD.arxml"
+"././arxml/AFS/Interfaces.arxml"
+"././arxml/AFS/OS_CFG.arxml"
+"././arxml/AFS/LightSystem_EcuExtr.arxml"
+"././arxml/AFS/EcuInstance_0_FlatMap.arxml"
+"././arxml/AFS/HeadLightSystem.arxml"
+"././arxml/AFS/Compositions.arxml"
+"././arxml/AFS/ISOLAR_PlatformTypes.arxml"

@@ -1,0 +1,100 @@
+#-------------------------------------------------------------------------------
+#
+# 'EVE v3.0' build process
+#  - supports multiple target types
+#  e.g. bake VECU_TARGET=RTPC VECU_HOST=192.168.40.14
+#
+# Outputs:
+#  - The ./src/gen directory contains subfolders for all generated code,
+#    organized by target type (by default)
+#  - The ./VECUs directory contains the build artefacts, again organized by
+#    target type. The final VECU executable ends up in ./VECUs/<target>/Bin
+#
+#-------------------------------------------------------------------------------
+
+# ---------------------------------------
+# Read EVE Build Directives (if present)
+# ---------------------------------------
+config = EveBuildInfo.load("EveBuildInfo.xml")
+
+# ---------------------------------------
+# Basic configuration
+# ---------------------------------------
+Recipe.target    = ENV['VECU_TARGET']  || config['target'] || 'MinGW'
+Recipe.ip        = ENV['VECU_HOST']    || config['host']   || 'localhost'
+Recipe.benchmark = config['benchmark'] || false
+Recipe.modules   = config['modules']   # Components needed for VECU
+
+# ---------------------------------------
+# Source locations
+# ---------------------------------------
+Recipe.src          = config['source'] || '.'                   # .c/.cpp/.h/.hpp file top level dir
+Recipe.src_excl     = config['excluded_source'] || []           # .c/.cpp/.h/.hpp excluded folders
+Recipe.include_path = config['include_path']    || []           # folders to add to include path during compilation
+Recipe.arxml        = config['arxml_root']      || '.'          # location for .arxml patterns files
+
+# ---------------------------------------
+# Build Control
+# ---------------------------------------
+Recipe.freeze_rte   = config['freeze_rte']                      # RTE files will not be touched. RTEGen will not run
+Recipe.freeze_rtaos = config['freeze_rtaos']                    # RTAOS files will not be touched. RTAOsGen will not run
+Recipe.freeze_mcal  = config['freeze_mcal']                     # MCAL files will not be touched. McalGen will not run
+Recipe.freeze_build = config['freeze_build']                    # No compile/link will happen
+Recipe.incremental_build = config['incremental_build']          # Mimimize the set of files that get recompiled
+Recipe.build_config = config['build_config']
+
+Recipe.rtaos_arxml  = config['rtaos_patterns']  || '*.arxml'    # Pattern for RTA-OS Arxml files
+Recipe.rtaos_excl   = config['rtaos_exclude']   || nil          # Regex for RTA-OS exclusions
+Recipe.rtaos_files  = config['rtaos_include']   || []           # Explicity specified Arxml files for RTAOS
+Recipe.rtaos_options = config['rtaos_options']  || []           # Additional command-line options for RTAOS Generator
+Recipe.rtaos_ignore_rte = (config['rtaos_depends_on_rte'].nil? ? false : !config['rtaos_depends_on_rte'])
+
+Recipe.rte_arxml    = config['rte_patterns']    || '*.arxml'    # Pattern for RTE Arxml files
+Recipe.rte_excl     = config['rte_exclude']     || 'osNeeds|Rte_BSWMD|Rte_McSupportData' # Exclusions from pattern
+Recipe.rte_files    = config['rte_include']     || []           # Explicity specified Arxml files for RTE
+Recipe.rte_options  = config['rte_options']     || []           # Additional command-line options for RTE Generator
+Recipe.rte_tracing  = config['rte_tracing']     || false        # Add RTE message trace/inject code
+
+Recipe.mcal_arxml   = config['mcal_patterns']   || '*.arxml'    # Pattern for MCAL Arxml files
+Recipe.mcal_excl    = config['mcal_exclude']    || nil          # Regex for MCAL  exclusions
+Recipe.mcal_files   = config['mcal_include']    || []           # Explicity specified Arxml files for MCAL
+Recipe.mcal_options = config['mcal_options']    || []           # Additional command-line options for MCAL Generator
+Recipe.mcal_normalize_root = true
+
+Recipe.mingw_c_options = config['mingw_c_options'] || []        # Additional command-line options for MinGW compilation
+Recipe.mingw_l_options = config['mingw_l_options'] || []        # Additional command-line options for MinGW linking
+Recipe.vs_c_options    = config['vs_c_options']    || []        # Additional command-line options for VisualStudio compilation
+Recipe.vs_l_options    = config['vs_l_options']    || []        # Additional command-line options for VisualStudio linking
+Recipe.gcc_c_options   = config['gcc_c_options']   || []        # Additional command-line options for VRTA-ux compilation
+Recipe.gcc_l_options   = config['gcc_l_options']   || []        # Additional command-line options for VRTA-ux linking
+
+Recipe.fmu_auto        = config['fmu_auto']        || false     # Auto build fmu?
+Recipe.fmu_files       = config['fmu_include']     || []        # XML files used to configure the fmu generation
+Recipe.fmu_version     = config['fmu_params']['version'] || "2.0" # FMI version for FMU
+
+Recipe.sfunc_auto      = config['sfunc_auto']      || false     # Auto build S-function?
+Recipe.sfunc_files     = config['sfunc_include'] || []          # XML files used to configure the S-function generation
+
+Recipe.boa_params      = config['boa_params'] || {}
+
+Recipe.xcp_generation  = config['xcp_generation']
+Recipe.xcp_ip          = config['xcp_host'] || Recipe.ip
+Recipe.xcp_port        = config['xcp_port'] || 18017            # Optional
+
+Recipe.message_files   = config['message_include'] || []        # XML files used to configure the message inject/trace code generation
+Recipe.custom_devices  = config['custom_devices'] || []         # XML files used to create custom devices
+if Recipe.custom_devices.empty?
+  Recipe.custom_devices = Dir['custom*.xml']
+end
+
+# ---------------------------------------
+# Output locations
+# ---------------------------------------
+Recipe.gen_dir         =   config['gen_dir']   || "./src/gen/#{Recipe.target}"
+
+# ---------------------------------------
+# Load other helpers and tasks
+# ---------------------------------------
+load_bake_tasks
+
+CLOBBER << './src/gen'

@@ -1,0 +1,193 @@
+#include "implementation.oil"
+
+CPU ATMEL_AT91SAM7S256 {
+  OS LEJOS_OSEK {
+    STATUS = EXTENDED;
+    STARTUPHOOK = FALSE;
+    ERRORHOOK = FALSE;
+    SHUTDOWNHOOK = FALSE;
+    PRETASKHOOK = FALSE;
+    POSTTASKHOOK = FALSE;
+    USEGETSERVICEID = FALSE;
+    USEPARAMETERACCESS = FALSE;
+    USERESSCHEDULER = FALSE;
+  };
+
+  APPMODE appmode1{};
+
+  /* RESOURCE & EVENT */
+  RESOURCE recordResource {
+    RESOURCEPROPERTY = STANDARD;
+  };
+
+  EVENT straightClickEvent {
+    MASK = AUTO;
+  };
+
+  EVENT curvePressEvent {
+    MASK = AUTO;
+  };
+  EVENT curveReleaseEvent {
+    MASK = AUTO;
+  };
+  EVENT breakPressEvent {
+    MASK = AUTO;
+  };
+  EVENT breakReleaseEvent {
+    MASK = AUTO;
+  };
+  EVENT BBtnClickEvent {
+    MASK = AUTO;
+  };
+
+  /* TASK*/
+  TASK straightTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 5;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    EVENT = straightClickEvent;
+    RESOURCE = recordResource;
+    STACKSIZE = 512;
+  };
+
+  TASK curveTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 5;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    EVENT = curvePressEvent;
+    EVENT = curveReleaseEvent;
+    STACKSIZE = 512;
+  };
+
+  TASK slowBreakTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 10;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  TASK breakTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 12;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    EVENT = breakPressEvent;
+    EVENT = breakReleaseEvent;
+    STACKSIZE = 512;
+  };
+
+  TASK setRecordModeTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 9;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    EVENT = BBtnClickEvent;
+    RESOURCE = recordResource;
+    STACKSIZE = 512;
+  };
+
+  TASK playRecordModeTask {
+    AUTOSTART = FALSE;
+    PRIORITY = 12;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  TASK slowStartTask {
+    AUTOSTART = FALSE;
+    PRIORITY = 5;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  TASK mainTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 9;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    RESOURCE = recordResource;
+    STACKSIZE = 512;
+  };
+
+  TASK idleTask {
+    AUTOSTART = TRUE {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 1;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  /* COUNTER & ALARM */
+  COUNTER SysTimerCnt {
+    MINCYCLE = 1;
+    MAXALLOWEDVALUE = 10000;
+    TICKSPERBASE = 1;
+  };
+
+  ALARM mainAlarm_5ms {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = mainTask;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 5;
+      APPMODE = appmode1;
+    };
+  };
+
+  ALARM slowBreakAlarm_500ms {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = slowBreakTask;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 500;
+      APPMODE = appmode1;
+    };
+  };
+
+  ALARM slowStartAlarm_250ms {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = slowStartTask;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 250;
+      APPMODE = appmode1;
+    };
+  };
+
+  ALARM playRecordAlarm_5ms {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK {
+      TASK = playRecordModeTask;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1;
+      CYCLETIME = 5;
+      APPMODE = appmode1;
+    };
+  };
+};

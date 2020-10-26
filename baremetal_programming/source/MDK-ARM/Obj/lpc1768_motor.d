@@ -1,0 +1,17 @@
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\source\LPC1768_motor.c
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\LPC1768_motor.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\lpc17xx_gpio.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Core\Device\NXP\LPC17xx\Include\LPC17xx.h
+.\obj\lpc1768_motor.o: E:\Programs\ARM\CMSIS\Include\core_cm3.h
+.\obj\lpc1768_motor.o: E:\Programs\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\lpc1768_motor.o: E:\Programs\ARM\CMSIS\Include\core_cmInstr.h
+.\obj\lpc1768_motor.o: E:\Programs\ARM\CMSIS\Include\core_cmFunc.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Core\Device\NXP\LPC17xx\Include\system_LPC17xx.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\lpc_types.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\LPC1768_Huins.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\lpc17xx_pinsel.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\lpc17xx_exti.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\lpc17xx_uart.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\LPC1768_Huins.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\LPC1768_utility.h
+.\obj\lpc1768_motor.o: ..\..\Huins_NXP_LPC1768_Library\Drivers\include\LPC1768_Huins.h
