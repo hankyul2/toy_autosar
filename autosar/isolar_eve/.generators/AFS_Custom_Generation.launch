@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="com.etas.evetools.custom.generator.core.LaunchConfigurationType">
-<stringAttribute key="VECU_NAME" value="AFS"/>
-<stringAttribute key="additional_command" value=""/>
-<stringAttribute key="delimiter" value=","/>
-<stringAttribute key="output_loc" value=""/>
-<stringAttribute key="tool_loc" value=""/>
-</launchConfiguration>

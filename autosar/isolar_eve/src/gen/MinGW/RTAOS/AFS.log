@@ -1,8 +1,0 @@
-Start at 2020-10-24 오후 9:38:02
-RTA-OS Code Generator 
-Version 5.4.4.21498, Copyright © ETAS 2015
-Stop at 2020-10-24 오후 9:38:35
-Warning: The stack used when idle should be specified when the system uses events.
-
-Errors: 0, Warnings: 1.
-Stop at 2020-10-24 오후 9:38:35

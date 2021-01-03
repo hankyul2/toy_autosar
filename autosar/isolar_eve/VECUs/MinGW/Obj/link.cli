@@ -1,1 +1,0 @@
--Wl,-Map -Wl,AFS.map -Wl,--allow-multiple-definition -o AFS.exe RTAOS.lib -lwinmm -lws2_32 -static-libstdc++ -static-libgcc
